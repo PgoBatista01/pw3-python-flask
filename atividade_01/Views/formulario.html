@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário - Santuário de Athena</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at center, #1e3cff, #0a0a2a, #000);
+    color: white;
+}
+
+/* MENU */
+.menu {
+    background: #111144;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu a {
+    color: gold;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #caa6ff;
+}
+
+/* FORMULÁRIO */
+.container {
+    width: 320px;
+    margin: 60px auto;
+    background: #111144;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: gold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: gold;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #caa6ff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="menu">
+    <a href="/">Home</a>
+    <a href="/personagem">Personagens</a>
+    <a href="/sagas">Sagas</a>
+    <a href="/noticias">Notícias</a>
+    <a href="/formulario">Contato</a>
+</div>
+
+<div class="container">
+    <h1>Contato</h1>
+
+    <form>
+        <ul>
+            <li>
+                <label>Nome:</label>
+                <input type="text" placeholder="Digite seu nome">
+            </li>
+
+            <li>
+                <label>Email:</label>
+                <input type="email" placeholder="Digite seu email">
+            </li>
+
+            <li>
+                <label>Personagem favorito:</label>
+                <input type="text" placeholder="Ex: Seiya">
+            </li>
+
+            <li>
+                <label>Mensagem:</label>
+                <textarea rows="4"></textarea>
+            </li>
+
+            <li>
+                <button type="submit">Enviar</button>
+            </li>
+        </ul>
+    </form>
+</div>
+
+</body>
+</html>

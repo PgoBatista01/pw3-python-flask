@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dados Enviados</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #1e3cff, #000);
+    color: white;
+}
+
+/* MENU */
+.menu {
+    background: #111144;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu a {
+    color: gold;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #caa6ff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: #111144;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: gold;
+}
+
+p {
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="menu">
+    <a href="/">Home</a>
+    <a href="/personagem">Personagens</a>
+    <a href="/sagas">Sagas</a>
+    <a href="/noticias">Notícias</a>
+    <a href="/formulario">Contato</a>
+</div>
+
+<div class="container">
+    <h1>Dados Enviados</h1>
+
+    <p><b>Nome:</b> {{ nome }}</p>
+    <p><b>Email:</b> {{ email }}</p>
+    <p><b>Personagem Favorito:</b> {{ personagem }}</p>
+    <p><b>Mensagem:</b> {{ mensagem }}</p>
+</div>
+
+</body>
+</html>
