@@ -15,20 +15,29 @@ app = Flask(__name__, template_folder ='Views')
 @app.route('/')
 
 
-#DEF cria funções no python
+#DEF cria funções no python.
 
 def home():
     return render_template('index.html')
 
 @app.route('/games')
-
 def games():
-    return render_template('games.html')
+    #Criando variaveis para a rota de GAMES.
+    
+    titulo = "Portal 2"
+    ano = 2011
+    categoria = "Puzzle"
+    #Enviando as variaveis para o HTML.
+    return render_template('games.html', titulo = titulo, ano = ano,  categoria= categoria,jogadores = jogadores)
+#Lista de Jogadores (uma lista e um vetor/array)
+jogadores = ['Marcos','Richard','Miguel','Renato','Pedro']
 
 @app.route('/consoles')
 
 def consoles():
-    return render_template('consoles.html')
+    #Criando um Objeto.
+    Console = {"Nome" : " Playstation 2", "Fabricante" : "Sony", "Ano" : 2000}
+    return render_template('consoles.html', Console = Console )
 
 #Iniciando o servidor na porta 5000.
 #O metodo .run() inicia o servidor.

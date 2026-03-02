@@ -6,6 +6,14 @@
     <title>Consoles</title>
 </head>
 <body>
+    <a href="/">Voltar</a>
    <h1> Bem vindo a páginas de consoles</h1>
+   <h2>Consoles em Destaque:</h2>
+   {% for chave, valor in Console.items() %}
+<details>
+    <sumary>{{chave}}</sumary>
+    <p>{{valor}}</p>
+</details>
+   {% endfor %}
 </body>
 </html>
