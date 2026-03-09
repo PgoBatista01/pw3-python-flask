@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<a href="/"> << Voltar</a>
+<h1>Bem- vindo a paginas de jogos</h1>
+<h2>JOGO EM DESTAQUE</h2>
+<p>game mais jogado pelos nossos usuarios</p>
+<ul>
+  <li>Titulo: <strong> {{titulo}} </strong></li>
+  <li>Ano: <strong>{{ano}} </strong></li>
+  <li>Categoria: <strong>{{categoria}} </strong></li>
+  <p>O Jogo {{titulo}} tem {{2026 - ano}} anos!</p>
+</ul>
+<h3>Top Players(Ranking de Jogadores)</h3>
+<ol>
+  {% for jogador in jogadores: %}
+  <li>{{jogador}}</li>
+  {% endfor%}
+</ol>
+{% endblock content%}
