@@ -1,13 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {%block content%}
+<main>
+  <h1>Bem-Vindo ao The Games</h1>
+  <h3>Seu site favorito de jogos</h3>
 
-{%block content%}
-<h1>Bem-Vindo ao The Games</h1>
-<h3>Seu site favorito de jogos</h3>
-<hr />
-<he>MENU</he>
-<ul>
-<li><a href="/games">pagina de GAMES</a></li>
-<li><a href="/consoles">Pagina de CONSOLES</a></li>
-</ul>
-
+  <img
+    src="{{url_for('static', filename='/imgs/Hollowknight.jpg')}}"
+    alt="The Games"
+    width="800px"
+  />
+</main>
 {% endblock content%}

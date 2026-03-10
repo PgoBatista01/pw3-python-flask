@@ -1,7 +1,6 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {%block content%}
+<main>
 
-{%block content%}
-<a href="/"> << Voltar</a>
 <h1>Bem- vindo a paginas de jogos</h1>
 <h2>JOGO EM DESTAQUE</h2>
 <p>game mais jogado pelos nossos usuarios</p>
@@ -17,4 +16,5 @@
   <li>{{jogador}}</li>
   {% endfor%}
 </ol>
+</main>
 {% endblock content%}
