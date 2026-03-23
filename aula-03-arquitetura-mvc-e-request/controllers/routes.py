@@ -1,45 +1,37 @@
-#Importando o flask para a aplicação
-from flask import  render_template, request
+
+from flask import Flask, render_template, request
+
+
+app = Flask(__name__, template_folder='views')
+
 
 def init_app(app):
-   listaConsoles = ['Playstation5', 'Xbox One', 'Super Nintendo','Atari','3DS']
 
-   @app.route('/')
-# def cria funções no Python
-   def home():
-    return render_template('index.html')
+    listaConsoles = ['Playstation 5', 'Xbox One',
+            'Super Nintendo', 'Atari 2600', 'Nintendo 3DS']
 
 
-   @app.route('/games')
-   def games():
-    # Criando variáveis para a rota de games
-    titulo = "Portal 2"
-    ano = 2011
-    categoria = "Puzzle"
-    # Lista de jogadores (uma lista é um vetor/array)
-    jogadores = ['Marcos', 'Richard', 'Miguel', 'Renato', 'Pedro']
-    # Enviando as variáveis para o HTML
-    return render_template('games.html',
-                           titulo=titulo,
-                           ano=ano,
-                           categoria=categoria,
-                           jogadores=jogadores)
+    @app.route('/')
+    def home():
+        return render_template('index.html')
 
+    @app.route('/games')
+    def games():
+        # Criar informação para a rota de games
+        titulo = "Portal 2"
+        ano = 2011
+        categoria = "Puzzle"
+        jogadores = ['Marcos', 'Richard', "Miguel", 'Renato', 'Pedro']
+        return render_template('games.html', titulo=titulo, ano=ano, categoria=categoria, jogadores=jogadores)
 
-   @app.route('/consoles', methods=['GET','POST'])
-   def consoles():
-    # Criando um objeto
-    console = {"Nome": "Playstation 2",
-               "Fabricante": "Sony",
-               "Ano": 2000}    
-    
-    
-    return render_template('consoles.html',
-                           console=console,
-                           listaConsoles=listaConsoles)
-    #Recebendo o valor do formulario
-if request.method =='POST':
-
-   if request.form.get('novoConsole'):
-         listaConsoles.append(request.form.get('novoConsole'))
-
+    @app.route('/consoles', methods=['GET', 'POST'])
+    def consoles():
+        # criando um objeto
+        console = {"Nome:": "Playstation 2 ",
+                   "Fabricante: ": "Sony", "Ano: ": 2000}
+        #Recebendo o valor do formulário
+        if request.method == 'POST':
+            if request.form.get('novoConsole'):
+                listaConsoles.append(request.form.get('novoConsole'))
+        
+        return render_template('consoles.html', console=console, listaConsoles=listaConsoles)
