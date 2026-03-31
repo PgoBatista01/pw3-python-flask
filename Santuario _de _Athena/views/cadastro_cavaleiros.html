@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Cadastro de Cavaleiros</h2>
+<hr />
+
+<form action="{{ url_for('cadastro_cavaleiros') }}" method="post">
+
+  <label>Nome</label>
+  <input
+    type="text"
+    name="nome"
+    placeholder="Nome do cavaleiro"
+    class="form-control"
+    required
+  />
+  <br />
+
+  <label>Armadura</label>
+  <input
+    type="text"
+    name="armadura"
+    placeholder="Armadura"
+    class="form-control"
+    required
+  />
+  <br />
+
+  <label>Signo</label>
+  <input
+    type="text"
+    name="signo"
+    placeholder="Signo"
+    class="form-control"
+    required
+  />
+  <br />
+
+  <label>Afiliação</label>
+  <input
+    type="text"
+    name="afiliacao"
+    placeholder="Bronze, Ouro, Prata..."
+    class="form-control"
+    required
+  />
+  <br />
+
+  <label>Status</label>
+  <input
+    type="text"
+    name="status"
+    placeholder="Vivo ou Morto"
+    class="form-control"
+    required
+  />
+  <br />
+
+  <label>Técnicas</label>
+  <input
+    type="text"
+    name="tecnicas"
+    placeholder="Golpes"
+    class="form-control"
+    required
+  />
+  <br />
+
+  <label>Poder</label>
+  <input
+    type="text"
+    name="poder"
+    placeholder="Nível de cosmos"
+    class="form-control"
+    required
+  />
+  <br />
+
+  <label>Personalidade</label>
+  <input
+    type="text"
+    name="personalidade"
+    placeholder="Características"
+    class="form-control"
+    required
+  />
+  <br />
+
+  <input type="submit" value="Cadastrar" class="btn btn-success" />
+  <input type="reset" value="Limpar" class="btn btn-danger" />
+
+</form>
+
+<br />
+<hr />
+
+<table class="table table-bordered table-hover">
+
+  <thead class="table-dark">
+    <tr>
+      <th>Nome</th>
+      <th>Armadura</th>
+      <th>Signo</th>
+      <th>Afiliação</th>
+      <th>Status</th>
+      <th>Técnicas</th>
+      <th>Poder</th>
+      <th>Personalidade</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for cavaleiro in listaCavaleiros %}
+    <tr>
+      <td>{{ cavaleiro.nome }}</td>
+      <td>{{ cavaleiro.armadura }}</td>
+      <td>{{ cavaleiro.signo }}</td>
+      <td>{{ cavaleiro.afiliacao }}</td>
+      <td>{{ cavaleiro.status }}</td>
+      <td>{{ cavaleiro.tecnicas }}</td>
+      <td>{{ cavaleiro.poder }}</td>
+      <td>{{ cavaleiro.personalidade }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+
+</table>
+
+{% endblock content %}

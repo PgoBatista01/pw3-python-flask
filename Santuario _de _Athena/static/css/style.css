@@ -1,0 +1,270 @@
+/* ========================= */
+/* 🔄 RESET */
+/* ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================= */
+/* 🌌 BODY */
+/* ========================= */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #e6ecff;
+    line-height: 1.6;
+
+    background: url('../imgs/santuario.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ========================= */
+/* 🧭 HEADER */
+/* ========================= */
+header {
+    background: linear-gradient(90deg, #1e3a8a, #d4af37);
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* ========================= */
+/* 📌 NAVBAR */
+/* ========================= */
+.navbar {
+    background: linear-gradient(90deg, #020617, #1e3a8a);
+}
+
+.navbar a {
+    color: #93c5fd !important;
+}
+
+.navbar a:hover {
+    color: #ffd700 !important;
+}
+
+/* ========================= */
+/* 📦 MAIN */
+/* ========================= */
+main {
+    width: 1300px;
+    max-width: 95%;
+    min-height: 100vh;
+    margin: 1.5rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+/* ========================= */
+/* 📍 FOOTER */
+/* ========================= */
+footer {
+    background: linear-gradient(90deg, #020617, #1e3a8a);
+    color: #93c5fd;
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* ========================= */
+/* 📝 TEXTOS */
+/* ========================= */
+h1, h2, h3 {
+    color: #ffd700;
+    text-shadow: 
+        0 0 10px rgba(255,215,0,0.7),
+        0 0 20px rgba(30,58,138,0.6);
+}
+
+p, li {
+    color: #000000;
+}
+
+/* ========================= */
+/* 🛍️ GRID CATÁLOGO */
+/* ========================= */
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+/* ========================= */
+/* 🎬 CARD PADRÃO */
+/* ========================= */
+.card {
+    height: 260px; /* 🔽 antes era ~320 */
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background: #111;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* IMAGEM MANGÁ */
+.card .img-manga {
+    width: 200px;
+    height: 296px;
+    object-fit: cover;
+}
+
+/* IMAGEM SAGA DO CÉU */
+.card .img-sagadoceu {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* IMAGEM DUBLADORES */
+.card .img-anime {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+/* OVERLAY MAIS SUAVE */
+.card-body {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+
+    transform: translateY(40%); /* 🔽 aparece mais da imagem */
+    opacity: 0;
+
+    transition: all 0.3s ease;
+}
+
+/* HOVER */
+.card:hover {
+    transform: scale(1.06);
+    z-index: 5;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.8),
+        0 0 15px rgba(59,130,246,0.5);
+}
+
+/* ZOOM LEVE */
+.card:hover img {
+    transform: scale(1.05); /* 🔽 menos zoom pra não esconder */
+    filter: brightness(0.8);
+}
+
+/* TEXTO SOBE NO HOVER */
+.card:hover .card-body {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ========================= */
+/* 🔘 BOTÕES */
+/* ========================= */
+.btn {
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* botão dourado */
+.btn-warning {
+    background: linear-gradient(45deg, #d4af37, #ffd700);
+    border: none;
+    color: #1b1b1b;
+}
+
+.btn-warning:hover {
+    box-shadow: 0 0 15px #ffd700;
+}
+
+/* botão azul */
+.btn-primary {
+    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+    border: none;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 15px #3b82f6;
+}
+
+/* ========================= */
+/* 🧾 FORMULÁRIOS */
+/* ========================= */
+input, textarea {
+    border-radius: 8px !important;
+    border: 1px solid #3b82f6;
+    background-color: rgba(10,15,40,0.8);
+    color: #fff;
+}
+
+/* ========================= */
+/* 📊 TABELAS */
+/* ========================= */
+table {
+    background-color: #ffffff;
+    color: #1b1b1b;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background: linear-gradient(90deg, #1e3a8a, #d4af37);
+    color: #ffffff;
+}
+
+tbody tr {
+    background-color: #f9fafb;
+    transition: 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #e0e7ff;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+/* ========================= */
+/* 🛡️ LISTA */
+/* ========================= */
+.list-group-item {
+    background: rgba(10, 15, 40, 0.8);
+    border: 1px solid #3b82f6;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: #e6ecff;
+}
+
+/* ========================= */
+/* 🖱️ SCROLL */
+/* ========================= */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#1e3a8a, #ffd700);
+    border-radius: 5px;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVO */
+/* ========================= */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .card img {
+        height: 140px;
+    }
+}

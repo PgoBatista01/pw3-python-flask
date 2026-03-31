@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main class="container">
+
+  <h1 class="mt-3"> Lista de Cavaleiros</h1>
+  <hr />
+
+  <ul class="list-group">
+
+    {% for cavaleiro in listaCavaleiros %}
+      <li class="list-group-item">
+
+        <h4>{{ cavaleiro.nome }}</h4>
+
+        <p><strong>Armadura:</strong> {{ cavaleiro.armadura }}</p>
+        <p><strong>Signo:</strong> {{ cavaleiro.signo }}</p>
+        <p><strong>Afiliação:</strong> {{ cavaleiro.afiliacao }}</p>
+        <p><strong>Status:</strong> {{ cavaleiro.status }}</p>
+
+        <p><strong>Técnicas:</strong> {{ cavaleiro.tecnicas }}</p>
+        <p><strong>Poder:</strong> {{ cavaleiro.poder }}</p>
+
+        <p><strong>Personalidade:</strong> {{ cavaleiro.personalidade }}</p>
+
+      </li>
+    {% endfor %}
+
+  </ul>
+
+</main>
+
+{% endblock content %}

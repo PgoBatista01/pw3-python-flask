@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Cadastro de Curiosidades</h2>
+<hr />
+
+<form action="{{ url_for('cadastro_curiosidades') }}" method="post">
+
+  <label>Título</label>
+  <input
+    type="text"
+    name="titulo"
+    placeholder="Título da curiosidade"
+    class="form-control"
+    required
+  />
+  <br />
+
+  <label>Conteúdo</label>
+  <textarea
+    name="conteudo"
+    placeholder="Descreva a curiosidade..."
+    class="form-control"
+    rows="4"
+    required
+  ></textarea>
+  <br />
+
+  <input type="submit" value="Cadastrar" class="btn btn-success" />
+  <input type="reset" value="Limpar" class="btn btn-danger" />
+
+</form>
+
+<br />
+<hr />
+
+<h3>Lista de Curiosidades</h3>
+
+<table class="table table-bordered table-hover">
+
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Conteúdo</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for curiosidade in listaCuriosidades %}
+    <tr>
+      <td>{{ curiosidade.titulo }}</td>
+      <td>{{ curiosidade.conteudo }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+
+</table>
+
+{% endblock content %}

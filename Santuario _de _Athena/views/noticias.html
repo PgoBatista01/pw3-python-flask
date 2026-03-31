@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main class="container">
+
+  <h1 class="mt-3 text-center">Notícias - Cavaleiros do Zodíaco</h1>
+  <hr />
+
+  <div class="catalogo">
+
+    {% for noticia in listaNoticias %}
+
+    <a href="{{ noticia.link }}" target="_blank" class="card-link">
+
+      <div class="card">
+
+        <img 
+          src="{{ url_for('static', filename='imgs/' + noticia.imagem) }}" 
+          alt="{{ noticia.titulo }}"
+          class="img-{{ noticia.imagem.split('.')[0] }}"
+        >
+
+        <div class="card-body">
+          <h5 class="card-title">{{ noticia.titulo }}</h5>
+          <p class="card-text">{{ noticia.descricao }}</p>
+        </div>
+
+      </div>
+
+    </a>
+
+    {% endfor %}
+
+  </div>
+
+</main>
+
+{% endblock content %}
