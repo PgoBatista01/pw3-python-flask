@@ -3,8 +3,7 @@
 
 <main class="container">
 
-  <h1 class="mt-3 text-center">Notícias - Cavaleiros do Zodíaco</h1>
-  <hr />
+  <h1 class="titulo">Notícias - Cavaleiros do Zodíaco</h1>
 
   <div class="catalogo">
 
@@ -17,7 +16,7 @@
         <img 
           src="{{ url_for('static', filename='imgs/' + noticia.imagem) }}" 
           alt="{{ noticia.titulo }}"
-          class="img-{{ noticia.imagem.split('.')[0] }}"
+          class="card-img"
         >
 
         <div class="card-body">

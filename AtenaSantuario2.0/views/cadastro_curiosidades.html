@@ -34,26 +34,6 @@
 <br />
 <hr />
 
-<h3>Lista de Curiosidades</h3>
 
-<table class="table table-bordered table-hover">
-
-  <thead>
-    <tr>
-      <th>Título</th>
-      <th>Conteúdo</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    {% for curiosidade in listaCuriosidades %}
-    <tr>
-      <td>{{ curiosidade.titulo }}</td>
-      <td>{{ curiosidade.conteudo }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-
-</table>
 
 {% endblock content %}

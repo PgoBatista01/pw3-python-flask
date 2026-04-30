@@ -94,36 +94,5 @@
 <br />
 <hr />
 
-<table class="table table-bordered table-hover">
-
-  <thead class="table-dark">
-    <tr>
-      <th>Nome</th>
-      <th>Armadura</th>
-      <th>Signo</th>
-      <th>Afiliação</th>
-      <th>Status</th>
-      <th>Técnicas</th>
-      <th>Poder</th>
-      <th>Personalidade</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    {% for cavaleiro in listaCavaleiros %}
-    <tr>
-      <td>{{ cavaleiro.nome }}</td>
-      <td>{{ cavaleiro.armadura }}</td>
-      <td>{{ cavaleiro.signo }}</td>
-      <td>{{ cavaleiro.afiliacao }}</td>
-      <td>{{ cavaleiro.status }}</td>
-      <td>{{ cavaleiro.tecnicas }}</td>
-      <td>{{ cavaleiro.poder }}</td>
-      <td>{{ cavaleiro.personalidade }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-
-</table>
 
 {% endblock content %}
