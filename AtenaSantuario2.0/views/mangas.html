@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h2> Mangás e História de Cavaleiros do Zodíaco</h2>
+<h2>📚 Mangás de Cavaleiros do Zodíaco</h2>
 <hr>
 
 <table class="tabela-historia">
 
     <thead>
         <tr>
-            <th>Resumo Completo de Saint Seiya</th>
+            <th>Lista de Mangás e Spin-offs</th>
         </tr>
     </thead>
 
@@ -16,97 +16,114 @@
         <tr>
             <td>
 
-                <!-- 🏛️ SANTUÁRIO -->
-                <h3>Saga do Santuário</h3>
-                <p><strong>Mangá:</strong> Cap. 1–45 | <strong>Anime:</strong> Ep. 1–73</p>
+                <ul class="list-group">
 
-                <p><strong>Guerra Galáctica:</strong> Seiya retorna ao Japão após um treinamento brutal na Grécia, carregando cicatrizes físicas e emocionais. Em um torneio entre Cavaleiros, rivalidades intensas surgem — mas tudo muda quando Ikki aparece e rouba a lendária Armadura de Ouro, transformando uma competição em guerra.</p>
+                    <!-- 📖 CLÁSSICO -->
+                    <li class="list-group-item">
+                        <h4>Clássico (Mangá Original)</h4>
+                        <p>A história original de Seiya e os Cavaleiros de Bronze protegendo Atena nas sagas mais icônicas como Santuário, Poseidon e Hades.</p>
+                        <a href="{{ mangas.classico }}" target="_blank" class="btn btn-warning">Acessar</a>
+                    </li>
 
-                <p><strong>Cavaleiros Negros:</strong> Ikki revela seu passado sombrio e traz consigo guerreiros corrompidos. As batalhas ficam mais pessoais, e a amizade entre Seiya, Shiryu, Hyoga e Shun começa a se formar sob dor e sacrifício.</p>
+                    <!-- 🌊 RERISE -->
+                    <li class="list-group-item">
+                        <h4>Rerise of Poseidon</h4>
+                        <p>Um novo capítulo do universo marinho que explora o destino dos Generais Marinas após a derrota de Poseidon.</p>
+                        <a href="{{ mangas.rerise }}" target="_blank" class="btn btn-warning">Acessar</a>
+                    </li>
 
-                <p><strong>Forças Ocultas:</strong> Enquanto lutam, os heróis percebem que existe uma conspiração dentro do próprio Santuário. O inimigo pode estar mais próximo do que imaginam.</p>
+                    <!-- 💀 LOST CANVAS -->
+                    <li class="list-group-item">
+                        <h4>The Lost Canvas</h4>
+                        <p>Uma guerra santa do passado com Tenma, Alone e Sasha. Uma das histórias mais emocionantes e trágicas do universo CDZ.</p>
+                        <a href="{{ mangas.lost }}" target="_blank" class="btn btn-warning">Acessar</a>
+                    </li>
 
-                <p><strong>Cavaleiros de Prata:</strong> Guerreiros muito mais poderosos entram em cena. Cada luta força os protagonistas a ultrapassarem seus limites — e revela que Atena está diretamente ligada a tudo.</p>
+                    <!-- 🔥 GAIDEN -->
+                    <li class="list-group-item">
+                        <h4>Lost Canvas Gaiden</h4>
+                        <p>Histórias paralelas focadas nos Cavaleiros de Ouro da era de Lost Canvas.</p>
+                        <a href="{{ mangas.gaiden }}" target="_blank" class="btn btn-primary">Acessar</a>
+                    </li>
 
-                <p><strong>Cavaleiros de Ouro:</strong> Os lendários guerreiros do zodíaco surgem. Seus poderes são esmagadores… e seu verdadeiro papel ainda é um mistério.</p>
+                    <!-- ⚡ ÔMEGA -->
+                    <li class="list-group-item">
+                        <h4>Ômega</h4>
+                        <p>Nova geração de Cavaleiros com Kouga como protagonista, trazendo uma abordagem moderna ao cosmos.</p>
+                        <a href="{{ mangas.omega }}" target="_blank" class="btn btn-primary">Acessar</a>
+                    </li>
 
-                <p><strong>12 Casas:</strong> Em uma corrida contra o tempo, os Cavaleiros precisam atravessar as casas do zodíaco para salvar Atena. Cada batalha é mais intensa que a anterior — e cada vitória custa caro.</p>
+                    <!-- 🕊️ SAINTIA -->
+                    <li class="list-group-item">
+                        <h4>Saintia Shō</h4>
+                        <p>Guerreiras que protegem Atena nas sombras enfrentando ameaças ocultas.</p>
+                        <a href="{{ mangas.saintia }}" target="_blank" class="btn btn-primary">Acessar</a>
+                    </li>
 
-                <a href="https://drive.google.com/drive/folders/1PGbkWHPkEt6U6SxmCkw8-_tmvFmJBcq5" target="_blank" class="btn btn-warning">Mangá Clássico</a>
+                    <!-- 🟡 NEXT DIMENSION -->
+                    <li class="list-group-item">
+                        <h4>Next Dimension</h4>
+                        <p>Continuação oficial do mangá clássico que mistura passado e presente em uma nova Guerra Santa.</p>
+                        <a href="{{ mangas.next }}" target="_blank" class="btn btn-warning">Acessar</a>
+                    </li>
 
-                <hr>
+                    <!-- 🔴 EPISODE G -->
+                    <li class="list-group-item">
+                        <h4>Episode G</h4>
+                        <p>Foco nos Cavaleiros de Ouro e nas batalhas contra os Titãs, expandindo o universo clássico.</p>
+                        <a href="{{ mangas.epg }}" target="_blank" class="btn btn-primary">Acessar</a>
+                    </li>
 
-                <!-- ❄️ ASGARD -->
-                <h3>Saga de Asgard</h3>
-                <p><strong>Ep. 74–99</strong></p>
+                    <!-- ⚔️ EP G ASSASSIN -->
+                    <li class="list-group-item">
+                        <h4>Episode G Assassin</h4>
+                        <p>Versão alternativa com múltiplas dimensões e combates ainda mais intensos.</p>
+                        <a href="{{ mangas.epg_assassin }}" target="_blank" class="btn btn-primary">Acessar</a>
+                    </li>
 
-                <p>Nas terras congeladas de Asgard, os Cavaleiros enfrentam os Guerreiros Deuses. Mas por trás das batalhas existe uma tragédia silenciosa — e uma verdade que muda completamente o sentido da guerra.</p>
+                    <!-- ⚫ DARK WING -->
+                    <li class="list-group-item">
+                        <h4>Dark Wing</h4>
+                        <p>Uma releitura sombria do universo CDZ com elementos mais modernos e diferentes perspectivas.</p>
+                        <a href="{{ mangas.dark }}" target="_blank" class="btn btn-primary">Acessar</a>
+                    </li>
 
-                <hr>
+                    <!-- 📘 EPISODE 0 -->
+                    <li class="list-group-item">
+                        <h4>Episode 0</h4>
+                        <p>Histórias extras que aprofundam eventos importantes do universo clássico.</p>
+                        <a href="{{ mangas.ep0 }}" target="_blank" class="btn btn-primary">Acessar</a>
+                    </li>
 
-                <!-- 🌊 POSEIDON -->
-                <h3>Saga de Poseidon</h3>
-                <p><strong>Mangá:</strong> Cap. 46–67</p>
+                    <!-- 📚 ENCICLOPÉDIAS -->
+                    <li class="list-group-item">
+                        <h4>Enciclopédias</h4>
+                        <p>Materiais oficiais com informações detalhadas sobre personagens, técnicas e universo.</p>
+                        <a href="{{ mangas.enciclopedias }}" target="_blank" class="btn btn-primary">Acessar</a>
+                    </li>
 
-                <p>Poseidon desperta e ameaça cobrir o mundo com oceanos. Para impedir o fim da humanidade, os Cavaleiros enfrentam os Generais Marinas em templos submersos onde cada segundo conta.</p>
+                    <!-- 📖 NOVELS -->
+                    <li class="list-group-item">
+                        <h4>Novels</h4>
+                        <p>Histórias em formato de livro que expandem o universo além do mangá e anime.</p>
+                        <a href="{{ mangas.novels }}" target="_blank" class="btn btn-primary">Acessar</a>
+                    </li>
 
-                <a href="https://drive.google.com/drive/folders/1HbXzL7reslzYwHK8WOOZ0BwM5U99FR7R" target="_blank" class="btn btn-warning">Rerise of Poseidon</a>
+                    <!-- 🌟 ORIGIN -->
+                    <li class="list-group-item">
+                        <h4>CDZ Origin</h4>
+                        <p>Explora o passado e origem de personagens importantes da série.</p>
+                        <a href="{{ mangas.origin }}" target="_blank" class="btn btn-primary">Acessar</a>
+                    </li>
 
-                <hr>
+                    <!-- 🔮 DESTINY -->
+                    <li class="list-group-item">
+                        <h4>Destiny</h4>
+                        <p>Histórias complementares que aprofundam eventos e personagens do universo Saint Seiya.</p>
+                        <a href="{{ mangas.destiny }}" target="_blank" class="btn btn-primary">Acessar</a>
+                    </li>
 
-                <!-- 💀 HADES -->
-                <h3>Saga de Hades</h3>
-
-                <p><strong>Santuário:</strong> Antigos aliados retornam da morte… mas como inimigos. O passado se torna a maior ameaça.</p>
-
-                <p><strong>Inferno:</strong> Os Cavaleiros invadem o mundo dos mortos enfrentando dor, culpa e destino.</p>
-
-                <p><strong>Elíseos:</strong> A batalha final decide o destino da Terra e da própria esperança.</p>
-
-                <a href="https://drive.google.com/drive/folders/1G0OtRCDqk98Sbuh7Y_cHo02IwrUfsv7f" target="_blank" class="btn btn-warning">Lost Canvas</a>
-
-                <hr>
-
-                <!-- 🔥 SPIN-OFFS -->
-                <h3>Spin-offs e Continuações</h3>
-
-                <p><strong>The Lost Canvas:</strong> Uma guerra antiga cheia de destino, amizade e tragédia.</p>
-                <a href="https://drive.google.com/drive/folders/1iy8C4pxGbVb6rcZDlrlv_jbd-mvnxiE9" target="_blank" class="btn btn-primary">Gaiden Lost Canvas</a>
-
-                <p><strong>Ômega:</strong> Nova geração de Cavaleiros com poderes diferentes e desafios modernos.</p>
-                <a href="https://drive.google.com/drive/folders/1YTBkoYv4YKGl77A5xsTsF3uYpBUp6W-I" target="_blank" class="btn btn-primary">Ômega</a>
-
-                <p><strong>Alma de Ouro:</strong> Cavaleiros de Ouro retornam com Armaduras Divinas.</p>
-
-                <hr>
-
-                <!-- 📚 OUTROS -->
-                <h3>Outros Mangás</h3>
-
-                <p><strong>Next Dimension:</strong> Continuação oficial que conecta passado e presente.</p>
-                <a href="https://drive.google.com/drive/folders/1byOCHAatBZ5LQzldrLgvXMwrKQ4d6Am6" target="_blank" class="btn btn-primary">Next Dimension</a>
-
-                <p><strong>Episode G:</strong> Mostra o verdadeiro poder dos Cavaleiros de Ouro.</p>
-                <a href="https://drive.google.com/drive/folders/1WLp9TjmSilUWyfZOTVcZ9MWhDDJy3Ryc" target="_blank" class="btn btn-primary">Episode G</a>
-
-                <a href="https://drive.google.com/drive/folders/1AnCbfAPs4nRo_qOH8OXgXR--jQuX9o3O" target="_blank" class="btn btn-primary">Episode G Assassin</a>
-
-                <p><strong>Saintia Shō:</strong> Guerreiras que lutam nas sombras para proteger Atena.</p>
-                <a href="https://drive.google.com/drive/folders/1B6ystPNV1U2xV56YrrRxh7hxwTCaefr6" target="_blank" class="btn btn-primary">Saintia Shō</a>
-
-                <p><strong>Dark Wing:</strong> Uma versão alternativa sombria do universo.</p>
-                <a href="https://drive.google.com/drive/folders/1-riR33Tw_KdPKNVNsf4D1PQKBPqHYs_0" target="_blank" class="btn btn-primary">Dark Wing</a>
-
-                <p><strong>Extras:</strong> Conteúdos complementares do universo CDZ.</p>
-                <a href="https://drive.google.com/drive/folders/1iU3Q_LMJd8JBXK5wG4RMPzfLjWoQvQBj" target="_blank" class="btn btn-primary">Episode 0</a>
-
-                <a href="https://drive.google.com/drive/folders/1OPnLonSk_-UGvDxowJ4nB3duVPcHSWDb" target="_blank" class="btn btn-primary">Enciclopédias</a>
-
-                <a href="https://drive.google.com/drive/folders/1yWo93gq0bN-H6ryxbC0VfLQLmMnjeEjR" target="_blank" class="btn btn-primary">Novels</a>
-
-                <a href="https://drive.google.com/drive/folders/16gT0DRZFrW67k9gIqFXXbgaqRbzfvIuE" target="_blank" class="btn btn-primary">CDZ Origin</a>
-
-                <a href="https://drive.google.com/drive/folders/1Pms-ySV2RK--uBdWNQCl_D3bSZH0vyhF" target="_blank" class="btn btn-primary">Destiny</a>
+                </ul>
 
             </td>
         </tr>

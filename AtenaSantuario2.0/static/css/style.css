@@ -62,15 +62,14 @@ main {
     padding: 2rem;
     border-radius: 15px;
 
-    background: rgba(10,15,40,0.6);
-    backdrop-filter: blur(10px);
+   
+  
 }
 
 /* ========================= */
 /* 📍 FOOTER */
 /* ========================= */
 footer {
-    background: linear-gradient(90deg, #020617, #1e3a8a);
     color: #93c5fd;
     margin-top: 2rem;
     padding: 1rem;
@@ -80,8 +79,8 @@ footer {
 /* ========================= */
 /* 📝 TEXTOS */
 /* ========================= */
-h1, h2, h3 {
-    color: #ffd700;
+h1, h2, h3, h4 {
+    color: #000000;
     text-shadow: 
         0 0 10px rgba(255, 217, 0, 0.863),
         0 0 20px rgba(20, 69, 204, 0.89);
@@ -89,7 +88,9 @@ h1, h2, h3 {
 
 p, li {
     color: #000000;
+    
 }
+
 
 /* ========================= */
 /* 🎬 GRID CATÁLOGO */
@@ -105,7 +106,6 @@ p, li {
 /* 🎬 CARD PREMIUM */
 /* ========================= */
 .card {
-    background: rgba(15,23,42,0.7);
     border-radius: 15px;
     overflow: hidden;
     position: relative;
@@ -204,25 +204,25 @@ p, li {
     transform: scale(1.07);
 }
 
-/* botão dourado */
+
 .btn-warning {
-    background: linear-gradient(45deg, #d4af37, #ffd700);
+    background: linear-gradient(45deg, #D3AF37, #999B9B, #CD7F32);
     border: none;
-    color: #1b1b1b;
+    color: #ffffff;
 }
 
 .btn-warning:hover {
-    box-shadow: 0 0 20px #ffd700;
+    box-shadow: 0 0 20px #0e015a;
 }
 
-/* botão azul */
+
 .btn-primary {
-    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+    background: linear-gradient(45deg,#D3AF37, #999B9B, #CD7F32);
     border: none;
 }
 
 .btn-primary:hover {
-    box-shadow: 0 0 20px #3b82f6;
+    box-shadow: 0 0 20px #0e015a;
 }
 
 /* ========================= */
